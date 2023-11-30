@@ -28,7 +28,7 @@ const koulen = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Dumb Pipte',
+  title: 'Dumb Pipe',
   description: 'Iroh connections are dumb pipes: easy, direct connections that punch through NATs & stay connected as network conditions change.',
 }
 
