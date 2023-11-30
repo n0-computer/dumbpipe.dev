@@ -21,7 +21,7 @@ export default function Home() {
       <Article id="iroh" date="">
         <Img src="/images/node_connections.png" alt="hero" width={1600} height={900} />
         <h2>Dumb pipes are Iroh Connections</h2>
-        <p>Ok, "dumb pipe" isn't really a thing. We made this to tell you about iroh connections. You can use the iroh connection layer as a dumb pipe.</p>
+        <p>Ok, &quot;dumb pipe&quot; isn't really a thing. We made this to tell you about iroh connections. You can use the iroh connection layer as a dumb pipe.</p>
         <Link className='block mt-6' href="https://iroh.computer/docs/connections">
           <Button>Iroh Connection Docs</Button>
         </Link>
