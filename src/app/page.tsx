@@ -6,7 +6,7 @@ import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { FormattedDate } from '@/components/FormattedDate'
-import { CodeGroup, Pre, Code } from '@/components/Code'
+// import { CodeGroup, Pre, Code } from '@/components/Code'
 import { Button } from '@/components/Button'
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
       <Article id="iroh" date="">
         <Img src="/images/node_connections.png" alt="hero" width={1600} height={900} />
         <h2>Dumb pipes are Iroh Connections</h2>
-        <p>Ok, &quot;dumb pipe&quot; isn't really a thing. We made this to tell you about iroh connections. You can use the iroh connection layer as a dumb pipe.</p>
+        <p>Ok, &quot;dumb pipe&quot; isn&apos;t really a thing. We made this to tell you about iroh connections. You can use the iroh connection layer as a dumb pipe.</p>
         <Link className='block mt-6' href="https://iroh.computer/docs/connections">
           <Button>Iroh Connection Docs</Button>
         </Link>
@@ -37,11 +37,11 @@ export default function Home() {
           <Button>relay docs</Button>
         </Link>
       </Article>
-      <Article date="">
+      <Article id="premium-relays" date="">
         <h2>Coming soon: Premium relays</h2>
         <p><Link href="https://iroh.network">iroh.network</Link> the team behind number zero runs the default relay network, which has a capped bandwidth. High-throughput, authenticated relays are coming to iroh.network in the future.</p>
       </Article>
-      <Article date="">
+      <Article id="need-more" date="">
         <h2>Need more?</h2>
         <p>Need pubsub? Data transfer? Sync? All of these are opt-in-able addons from <Link href="https://iroh.computer/docs/layers">iroh</Link>. But if you add these things, the pipe is no longer dumb. You decide how to feel about that.</p>
       </Article>
@@ -53,8 +53,6 @@ export default function Home() {
     </Layout>
   )
 }
-
-export const a = Link
 
 type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
 

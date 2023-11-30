@@ -43,7 +43,7 @@ export function Tag({
   children,
   variant = 'medium',
   color = 'irohPurple',
-}) {
+}: { variant?: string, color?: string, children: React.ReactNode}) {
   return (
     <span
       className={clsx(
