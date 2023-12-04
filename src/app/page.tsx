@@ -12,9 +12,15 @@ import { Button } from '@/components/Button'
 export default function Home() {
   return (
     <Layout>
+      <Article id="connect" date="">
+        <h2>Connect A to B. Send Data.</h2>
+        <p>In 2023 It&apos;s hard to connect two devices directly. Dumb pipe punches through NATs, using on-the-fly node identifiers, and keeps your machines connected even as network conditions change.</p>
+        <p>What you actually <i className='italic'>do</i> with that connection is up to you. </p>
+      </Article>
       <Article id="download" date="">
-        <h2>Install</h2>
+        <h2>A unix pipe between computers</h2>
         <Code language='bash'>$ curl https://dumbpipe.dev/install.sh | sh</Code>
+        <p>get <span className='font-mono'>dumbpipe</span> with a single command on two computers, connect them & pipe data from one machine to the other. No accounts. No configuration.</p>
         <h2>Receiver</h2>
         <Code language='bash'>{`
 $ dumbpipe listen
@@ -29,21 +35,16 @@ echo "hello" | dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv
     `}</Code>
         <p>This will work, regardless of where the two machines are. Dumb pipe finds a way.</p>     
       </Article>
-      <Article id="connect" date="">
-        <Img src="/images/connect_2_computers.png" width={1600} height={900} />
-        <h2>Connect A to B. Send Data.</h2>
-        <p>In 2023 It&apos;s hard to connect two devices directly. Dumb pipe punches through NATs, using on-the-fly node identifiers, and keeps your machines connected even as network conditions change.</p>
-        <p>What you actually <i className='italic'>do</i> with that connection is up to you. </p>
-      </Article>
       <Article id="iroh" date="">
         <Img src="/images/node_connections.png" alt="hero" width={1600} height={900} />
-        <h2>Dumb pipes are Iroh Connections</h2>
-        <p><span className='font-mono'>dumbpipe</span> is a <a href="https://github.com/n0-computer/dumbpipe/blob/main/src/main.rs">200-line wrapper</a> around the <a href="https://crates.io/crates/iroh-net" className='font-mono'>iroh-net</a> rust crate. You can use the iroh connection layer as a dumb pipe in your own app.</p>
+        <h2>Put a dumb pipe in your app</h2>
+        <p>Dumb pipes are Iroh Connections. The <span className='font-mono'>dumbpipe</span> tool is a <a href="https://github.com/n0-computer/dumbpipe/blob/main/src/main.rs">200-line wrapper</a> around the <a href="https://crates.io/crates/iroh-net" className='font-mono'>iroh-net</a> rust crate. You can use the iroh connection layer as a dumb pipe in your own app.</p>
         <Link className='block mt-6' href="https://iroh.computer/docs/connections">
           <Button>Iroh Connection Docs</Button>
         </Link>
       </Article>
       <Article id="" date="">
+        <Img src="/images/connect_2_computers.png" width={1600} height={900} />
         <h2>QUIC &amp; Dumb</h2>
         <p>These dumb pipes use QUIC over a magic socket. It may be dumb, but it is still encrypted, and sent over UDP. You can register multiple different handlers with distinct QUIC ALPNs to separate concerns using substreams.</p>
       </Article>
@@ -62,11 +63,6 @@ echo "hello" | dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv
         <h2>Need more?</h2>
         <p>Need pubsub? Data transfer? Sync? All of these are opt-in-able addons from <Link href="https://iroh.computer/docs/layers">iroh</Link>. But if you add these things, the pipe is no longer dumb. You decide how to feel about that.</p>
       </Article>
-      {/* <Article id="example" date="">
-        <CodeGroup title="example.rs">
-          <Pre title="rust" className='language-rust'>{rustExample}</Pre>
-        </CodeGroup>
-      </Article> */}
     </Layout>
   )
 }
@@ -91,11 +87,11 @@ function ContentWrapper({
   ...props
 }: React.ComponentPropsWithoutRef<'div'>) {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-      <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
+    <div className="mx-auto max-w-7xl px-6 lg:flex">
+      <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end">
         <div
           className={clsx(
-            'mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto',
+            'mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-[36.5rem] lg:flex-auto',
             className,
           )}
           {...props}
@@ -115,7 +111,6 @@ function ArticleHeader({ id, date }: { id: string; date?: string | Date }) {
             className="hidden xl:pointer-events-auto xl:block xl:text-2xs/4 xl:font-medium xl:text-white/50"
           />}
         </Link>
-        <div className="h-2.5 w-2.5 rounded-full bg-gray-700 -ml-0.5 lg:-mr-4 lg:ml-0 xl:-mr-[1px] dark:bg-white" />
       </div>
       <ContentWrapper>
         <div className="flex">
