@@ -21,7 +21,7 @@ function Pipeline() {
             />
           </pattern>
         </defs>
-        <rect width="100%" height="100%" className="fill-gray-950/10 xl:fill-gray/10" />
+        <rect width="100%" height="100%" className="fill-gray-950/10 xl:fill-gray/10 dark:fill-white/20" />
       </svg>
     </div>
   )

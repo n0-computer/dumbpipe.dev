@@ -6,12 +6,29 @@ import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { FormattedDate } from '@/components/FormattedDate'
-// import { CodeGroup, Pre, Code } from '@/components/Code'
+import Code from '@/components/Code'
 import { Button } from '@/components/Button'
 
 export default function Home() {
   return (
     <Layout>
+      <Article id="download" date="">
+        <h2>Install</h2>
+        <Code language='bash'>$ curl https://dumbpipe.dev/install.sh | sh</Code>
+        <h2>Receiver</h2>
+        <Code language='bash'>{`
+$ dumbpipe listen
+using secret key 23ryys7pgvjrr57pcrvyivdrhvqyykg2tv3leou5grm66xfd7zzq
+Listening. To connect, use:
+dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv3hh6m4rdgaibamaeqwjaegplgayaycueiom6wmbqcjqaibavg5hiaaaaaaaaaaabaau7wmbq
+          `}
+        </Code>
+        <h2>Sender</h2>
+        <Code language='bash'>{`
+echo "hello" | dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv3hh6m4rdgaibamaeqwjaegplgayaycueiom6wmbqcjqaibavg5hiaaaaaaaaaaabaau7wmbq
+    `}</Code>
+        <p>This will work, regardless of where the two machines are. Dumb pipe finds a way.</p>     
+      </Article>
       <Article id="connect" date="">
         <Img src="/images/connect_2_computers.png" width={1600} height={900} />
         <h2>Connect A to B. Send Data.</h2>
@@ -21,7 +38,7 @@ export default function Home() {
       <Article id="iroh" date="">
         <Img src="/images/node_connections.png" alt="hero" width={1600} height={900} />
         <h2>Dumb pipes are Iroh Connections</h2>
-        <p>Ok, &quot;dumb pipe&quot; isn&apos;t really a thing. We made this to tell you about iroh connections. You can use the iroh connection layer as a dumb pipe.</p>
+        <p><span className='font-mono'>dumbpipe</span> is a <a href="https://github.com/n0-computer/dumbpipe/blob/main/src/main.rs">200-line wrapper</a> around the <a href="https://crates.io/crates/iroh-net" className='font-mono'>iroh-net</a> rust crate. You can use the iroh connection layer as a dumb pipe in your own app.</p>
         <Link className='block mt-6' href="https://iroh.computer/docs/connections">
           <Button>Iroh Connection Docs</Button>
         </Link>

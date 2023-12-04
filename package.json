@@ -28,6 +28,7 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-syntax-highlighter": "^15.5.0",
     "recma-import-images": "^0.0.2",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.1.0",
@@ -41,6 +42,7 @@
     "zustand": "^4.4.7"
   },
   "devDependencies": {
+    "@types/react-syntax-highlighter": "^15.5.10",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.16",
     "prettier": "^3.0.1",
