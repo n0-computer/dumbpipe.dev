@@ -19,7 +19,7 @@ export default function Home() {
           </Article>
           <Article id="download" date="">
               <h2>A unix pipe between computers</h2>
-              <Code language='bash'>$ curl https://dumbpipe.dev/install.sh | sh</Code>
+              <Code language='bash'>$ curl -sL https://www.dumbpipe.dev/install.sh | sh</Code>
               <p>get <span className='font-mono'>dumbpipe</span> with a single command on two computers, connect them & pipe data from one machine to the other. No accounts. No configuration.</p>
               <h2>Receiver</h2>
               <Code language='bash'>{`
