@@ -11,59 +11,59 @@ import { Button } from '@/components/Button'
 
 export default function Home() {
   return (
-    <Layout>
-      <Article id="connect" date="">
-        <h2>Connect A to B. Send Data.</h2>
-        <p>In 2023 It&apos;s hard to connect two devices directly. Dumb pipe punches through NATs, using on-the-fly node identifiers, and keeps your machines connected even as network conditions change.</p>
-        <p>What you actually <i className='italic'>do</i> with that connection is up to you. </p>
-      </Article>
-      <Article id="download" date="">
-        <h2>A unix pipe between computers</h2>
-        <Code language='bash'>$ curl https://dumbpipe.dev/install.sh | sh</Code>
-        <p>get <span className='font-mono'>dumbpipe</span> with a single command on two computers, connect them & pipe data from one machine to the other. No accounts. No configuration.</p>
-        <h2>Receiver</h2>
-        <Code language='bash'>{`
+      <Layout>
+          <Article id="connect" date="">
+              <h2>Connect A to B. Send Data.</h2>
+              <p>In 2023 it&apos;s hard to connect two devices directly. Dumb pipe punches through NATs, using on-the-fly node identifiers. It even keeps your machines connected as network conditions change.</p>
+              <p>What you actually <i className='italic'>do</i> with that connection is up to you. </p>
+          </Article>
+          <Article id="download" date="">
+              <h2>A unix pipe between computers</h2>
+              <Code language='bash'>$ curl https://dumbpipe.dev/install.sh | sh</Code>
+              <p>get <span className='font-mono'>dumbpipe</span> with a single command on two computers, connect them & pipe data from one machine to the other. No accounts. No configuration.</p>
+              <h2>Receiver</h2>
+              <Code language='bash'>{`
 $ dumbpipe listen
 using secret key 23ryys7pgvjrr57pcrvyivdrhvqyykg2tv3leou5grm66xfd7zzq
 Listening. To connect, use:
 dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv3hh6m4rdgaibamaeqwjaegplgayaycueiom6wmbqcjqaibavg5hiaaaaaaaaaaabaau7wmbq
-          `}
-        </Code>
-        <h2>Sender</h2>
-        <Code language='bash'>{`
+                  `}
+              </Code>
+              <h2>Sender</h2>
+              <Code language='bash'>{`
 echo "hello" | dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv3hh6m4rdgaibamaeqwjaegplgayaycueiom6wmbqcjqaibavg5hiaaaaaaaaaaabaau7wmbq
-    `}</Code>
-        <p>This will work, regardless of where the two machines are. Dumb pipe finds a way.</p>     
-      </Article>
-      <Article id="iroh" date="">
-        <Img src="/images/node_connections.png" alt="hero" width={1600} height={900} />
-        <h2>Put a dumb pipe in your app</h2>
-        <p>Dumb pipes are Iroh Connections. The <span className='font-mono'>dumbpipe</span> tool is a <a href="https://github.com/n0-computer/dumbpipe/blob/main/src/main.rs">200-line wrapper</a> around the <a href="https://crates.io/crates/iroh-net" className='font-mono'>iroh-net</a> rust crate. You can use the iroh connection layer as a dumb pipe in your own app.</p>
-        <Link className='block mt-6' href="https://iroh.computer/docs/connections">
-          <Button>Iroh Connection Docs</Button>
-        </Link>
-      </Article>
-      <Article id="" date="">
-        <Img src="/images/connect_2_computers.png" width={1600} height={900} />
-        <h2>QUIC &amp; Dumb</h2>
-        <p>These dumb pipes use QUIC over a magic socket. It may be dumb, but it is still encrypted, and sent over UDP. You can register multiple different handlers with distinct QUIC ALPNs to separate concerns using substreams.</p>
-      </Article>
-      <Article id="relay" date="">
-        <h2>Sometimes you gotta relay</h2>
-        <p>For somewhere around 10-20% of connections, it&apos;s simply not possible to connect two devices directly. For those cases, we use a meshed network of relay nodes to pack up UDP traffic & send it over HTTP. Sounds silly, but it works.</p>
-        <Link className='block mt-6' href="https://iroh.computer/docs/connections">
-          <Button>relay docs</Button>
-        </Link>
-      </Article>
-      <Article id="premium-relays" date="">
-        <h2>Coming soon: Premium relays</h2>
-        <p><Link href="https://iroh.network">iroh.network</Link> the team behind number zero runs the default relay network, which has a capped bandwidth. High-throughput, authenticated relays are coming to iroh.network in the future.</p>
-      </Article>
-      <Article id="need-more" date="">
-        <h2>Need more?</h2>
-        <p>Need pubsub? Data transfer? Sync? All of these are opt-in-able addons from <Link href="https://iroh.computer/docs/layers">iroh</Link>. But if you add these things, the pipe is no longer dumb. You decide how to feel about that.</p>
-      </Article>
-    </Layout>
+                  `}</Code>
+              <p>This will work, regardless of where the two machines are. Dumb pipe finds a way.</p>     
+          </Article>
+          <Article id="iroh" date="">
+              <Img src="/images/node_connections.png" alt="hero" width={1600} height={900} />
+              <h2>Put a dumb pipe in your app</h2>
+              <p>Dumb pipes are Iroh Connections. The <span className='font-mono'>dumbpipe</span> tool is a <a href="https://github.com/n0-computer/dumbpipe/blob/main/src/main.rs">200-line wrapper</a> around the <a href="https://crates.io/crates/iroh-net" className='font-mono'>iroh-net</a> rust crate. You can use the iroh connection layer as a dumb pipe in your own app.</p>
+              <Link className='block mt-6' href="https://iroh.computer/docs/connections">
+                  <Button>Iroh Connection Docs</Button>
+              </Link>
+          </Article>
+          <Article id="" date="">
+              <Img src="/images/connect_2_computers.png" width={1600} height={900} />
+              <h2>QUIC &amp; Dumb</h2>
+              <p>These dumb pipes use QUIC over a magic socket. It may be dumb, but it still has all the features of a full QUIC connection: UDP-based, stream-multiplexing and encrypted. Besides using the multiplexed streams you can also use multiple connections each with their own ALPN.</p>
+          </Article>
+          <Article id="relay" date="">
+              <h2>Sometimes you gotta relay</h2>
+              <p>For somewhere around 10-20% of connections, it&apos;s simply not possible to connect two devices directly. For those cases, we use a meshed network of relay nodes to pack up UDP traffic & send it over HTTP. Sounds silly, but it works. And the magic socket handles all this under the hood.</p>
+              <Link className='block mt-6' href="https://iroh.computer/docs/connections">
+                  <Button>relay docs</Button>
+              </Link>
+          </Article>
+          <Article id="premium-relays" date="">
+              <h2>Coming soon: Premium relays</h2>
+              <p>The team behind number0 runs the default relay network, which has a capped bandwidth. High-throughput, authenticated relays are coming to <Link href="https://iroh.network">iroh.network</Link> in the future.</p>
+          </Article>
+          <Article id="need-more" date="">
+              <h2>Need more?</h2>
+              <p>Need pubsub? Data transfer? Sync? All of these are opt-in addons from <Link href="https://iroh.computer/docs/layers">iroh</Link>. But if you add these things, the pipe is no longer dumb. You decide how to feel about that.</p>
+          </Article>
+      </Layout>
   )
 }
 
