@@ -23,15 +23,15 @@ export default function Home() {
               <p>get <span className='font-mono'>dumbpipe</span> with a single command on two computers, connect them & pipe data from one machine to the other. No accounts. No configuration.</p>
               <h2>Receiver</h2>
               <Code language='bash'>{`
-$ dumbpipe listen
+$ ./dumbpipe listen
 using secret key 23ryys7pgvjrr57pcrvyivdrhvqyykg2tv3leou5grm66xfd7zzq
 Listening. To connect, use:
-dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv3hh6m4rdgaibamaeqwjaegplgayaycueiom6wmbqcjqaibavg5hiaaaaaaaaaaabaau7wmbq
+./dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv3hh6m4rdgaibamaeqwjaegplgayaycueiom6wmbqcjqaibavg5hiaaaaaaaaaaabaau7wmbq
                   `}
               </Code>
               <h2>Sender</h2>
               <Code language='bash'>{`
-echo "hello" | dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv3hh6m4rdgaibamaeqwjaegplgayaycueiom6wmbqcjqaibavg5hiaaaaaaaaaaabaau7wmbq
+echo "hello" | ./dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv3hh6m4rdgaibamaeqwjaegplgayaycueiom6wmbqcjqaibavg5hiaaaaaaaaaaabaau7wmbq
                   `}</Code>
               <p>This will work, regardless of where the two machines are. Dumb pipe finds a way.</p>     
           </Article>
