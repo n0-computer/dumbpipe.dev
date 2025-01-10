@@ -38,7 +38,7 @@ echo "hello" | ./dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvh
           <Article id="iroh" date="">
               <Img src="/images/node_connections.png" alt="hero" width={1600} height={900} />
               <h2>Put a dumb pipe in your app</h2>
-              <p>Dumb pipes are Iroh Connections. The <span className='font-mono'>dumbpipe</span> tool is a <a href="https://github.com/n0-computer/dumbpipe/blob/main/src/main.rs">200-line wrapper</a> around the <a href="https://crates.io/crates/iroh-net" className='font-mono'>iroh-net</a> rust crate. You can use the iroh connection layer as a dumb pipe in your own app.</p>
+              <p>Dumb pipes are Iroh Connections. The <span className='font-mono'>dumbpipe</span> tool is a <a href="https://github.com/n0-computer/dumbpipe/blob/main/src/main.rs">200-line wrapper</a> around the <a href="https://crates.io/crates/iroh" className='font-mono'>iroh</a> rust crate. You can use the iroh connection layer as a dumb pipe in your own app.</p>
               <Link className='block mt-6' href="https://iroh.computer/docs/layers/connections">
                   <Button>Iroh Connection Docs</Button>
               </Link>
