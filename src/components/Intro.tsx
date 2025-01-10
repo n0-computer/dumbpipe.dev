@@ -67,7 +67,7 @@ export function Intro() {
         <IconLink href="https://iroh.computer/docs/layers/connections" icon={BookIcon} className="flex-none">
           Docs
         </IconLink>
-        <IconLink href="https://github.com/n0-computer/iroh/tree/main/iroh-net" icon={GitHubIcon} className="flex-none">
+        <IconLink href="https://github.com/n0-computer/iroh/tree/main/iroh" icon={GitHubIcon} className="flex-none">
           GitHub
         </IconLink>
         <IconLink href="https://iroh.computer/discord" icon={DiscordIcon} className="flex-none">
