@@ -33,7 +33,7 @@ Listening. To connect, use:
               <Code language='bash'>{`
 echo "hello" | ./dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvhwv3hh6m4rdgaibamaeqwjaegplgayaycueiom6wmbqcjqaibavg5hiaaaaaaaaaaabaau7wmbq
                   `}</Code>
-              <p>This will work, regardless of where the two machines are. Dumb pipe finds a way.</p>     
+              <p>This will work, regardless of where the two machines are. Dumb pipe finds a way.</p>
           </Article>
           <Article id="iroh" date="">
               <Img src="/images/node_connections.png" alt="hero" width={1600} height={900} />
@@ -56,12 +56,12 @@ echo "hello" | ./dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvh
               </Link>
           </Article>
           <Article id="premium-relays" date="">
-              <h2>Coming soon: Premium relays</h2>
-              <p>The team behind number0 runs the default relay network, which has a capped bandwidth. High-throughput, authenticated relays are coming to <Link href="https://iroh.network">iroh.network</Link> in the future.</p>
+              <h2>Your own Network</h2>
+              <p>The team behind number0 runs the default relay network, which has a capped bandwidth. High-throughput, authenticated relays are now available through <Link href="https://n0des.iroh.computer">n0des</Link>!</p>
           </Article>
           <Article id="need-more" date="">
               <h2>Need more?</h2>
-              <p>Need pubsub? Data transfer? Sync? All of these are opt-in addons from <Link href="https://iroh.computer/docs/layers">iroh</Link>. But if you add these things, the pipe is no longer dumb. You decide how to feel about that.</p>
+              <p>Need pubsub? Data transfer? Sync? All of these are opt-in addons from <Link href="https://iroh.computer/proto">iroh</Link>. But if you add these things, the pipe is no longer dumb. You decide how to feel about that.</p>
           </Article>
       </Layout>
   )
