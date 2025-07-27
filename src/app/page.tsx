@@ -37,9 +37,9 @@ echo "hello" | ./dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvh
           </Article>
           <Article id="iroh" date="">
               <h2>Put a dumb pipe in your app</h2>
-              <p>Dumb pipes are Iroh Connections. The <span className='font-mono'>dumbpipe</span> tool is a <a href="https://github.com/n0-computer/dumbpipe/blob/main/src/main.rs">200-line wrapper</a> around the <a href="https://crates.io/crates/iroh" className='font-mono'>iroh</a> rust crate. You can use the iroh connection layer as a dumb pipe in your own app.</p>
-              <Link className='block mt-6' href="https://iroh.computer/docs/layers/connections">
-                  <Button>Iroh Connection Docs</Button>
+              <p>Dumb pipes are Iroh Connections. The <span className='font-mono'>dumbpipe</span> tool is a <a href="https://github.com/n0-computer/dumbpipe/blob/main/src/main.rs">200-line wrapper</a> around the <a href="https://crates.io/crates/iroh" className='font-mono'>iroh</a> rust crate. You can use the iroh Endpoint to create a connection to use as a dumb pipe in your own app.</p>
+              <Link className='block mt-6' href="https://iroh.computer/docs/concepts/endpoint">
+                  <Button>Iroh Endpoint Docs</Button>
               </Link>
           </Article>
           <Article id="" date="">
@@ -50,7 +50,7 @@ echo "hello" | ./dumbpipe connect nodeecsxraxjtqtneathgplh6d5nb2rsnxpfulmkec2rvh
           <Article id="relay" date="">
               <h2>Sometimes you gotta relay</h2>
               <p>For somewhere around 10-20% of connections, it&apos;s simply not possible to connect two devices directly. For those cases, we use a meshed network of relay nodes to pack up UDP traffic & send it over HTTP. Sounds silly, but it works. And the magic socket handles all this under the hood.</p>
-              <Link className='block mt-6' href="https://iroh.computer/docs/layers/connections">
+              <Link className='block mt-6' href="https://iroh.computer/docs/concepts/relay">
                   <Button>relay docs</Button>
               </Link>
           </Article>
