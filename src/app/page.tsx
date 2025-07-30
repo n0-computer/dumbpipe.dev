@@ -20,7 +20,11 @@ export default function Home() {
           <Article id="download" date="">
               <h2>A unix pipe between computers</h2>
               <Code language='bash'>$ curl -sL https://www.dumbpipe.dev/install.sh | sh</Code>
-              <p>get <span className='font-mono'>dumbpipe</span> with a single command on two computers, connect them & pipe data from one machine to the other. No accounts. No configuration.</p>
+              <p>Get <span className='font-mono'>dumbpipe</span> with a single command on two computers, connect them & pipe data from one machine to the other. No accounts. No configuration.</p>
+              <p>Alternatively, you can install it with <a href="https://doc.rust-lang.org/stable/cargo/">Cargo</a>:</p>
+              <Code language='bash'>cargo install dumbpipe</Code>
+              <p>Or <a href="https://brew.sh">Homebrew</a>:</p>
+              <Code language='bash'>brew install dumbpipe</Code>
               <h2>Receiver</h2>
               <Code language='bash'>{`
 $ ./dumbpipe listen
