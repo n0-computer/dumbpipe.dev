@@ -91,7 +91,7 @@ function ContentWrapper({
 }: React.ComponentPropsWithoutRef<'div'>) {
   return (
     <div className="mx-auto max-w-7xl px-6 lg:flex">
-      <div className="lg:ml-96 lg:flex lg:w-full lg:justify-end">
+      <div className="lg:ml-80 lg:flex lg:w-full lg:justify-end">
         <div
           className={clsx(
             'mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-[36.5rem] lg:flex-auto',
