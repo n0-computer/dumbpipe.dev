@@ -5,6 +5,9 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        'lg': '1200px',
+      },
       fontSize: {
         '2xs': '.6875rem',
       },
