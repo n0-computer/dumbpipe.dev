@@ -19,7 +19,10 @@ export default function Home() {
           </Article>
           <Article id="download" date="">
               <h2>A unix pipe between computers</h2>
+              <p>Add dumbpipe to your machine using bash:</p>
               <Code language='bash'>$ curl -sL https://www.dumbpipe.dev/install.sh | sh</Code>
+              <p>On windows with PowerShell:</p>
+              <Code language='bash'>$ iwr https://www.dumbpipe.dev/install.ps1 -useb | iex</Code>
               <p>Get <span className='font-mono'>dumbpipe</span> with a single command on two computers, connect them & pipe data from one machine to the other. No accounts. No configuration.</p>
               <p>Alternatively, you can install it with <a href="https://doc.rust-lang.org/stable/cargo/">Cargo</a>:</p>
               <Code language='bash'>cargo install dumbpipe</Code>
