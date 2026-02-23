@@ -27,4 +27,4 @@ release_target_url=$(
     sed -re 's/.*: "([^"]+)".*/\1/' \
 )
 
-curl -sL "$release_target_url" | tar xz
+curl -sL "$release_target_url" | tar xzf -
