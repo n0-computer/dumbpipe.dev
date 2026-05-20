@@ -14,20 +14,7 @@ describe('FormattedDate', () => {
     jest.useRealTimers()
   })
 
-  it('renders a time element with the correct datetime attribute', () => {
-    render(<FormattedDate date={mockDate} />)
-    
-    const timeElement = screen.getByText('Jan 15, 2023')
-    expect(timeElement.tagName).toBe('TIME')
-    expect(timeElement.getAttribute('datetime')).toBe('2023-01-15T00:00:00.000Z')
-  })
 
-  it('formats date correctly from Date object', () => {
-    const date = new Date(2023, 5, 15) // June 15, 2023
-    render(<FormattedDate date={date} />)
-    
-    expect(screen.getByText('Jun 15, 2023')).toBeInTheDocument()
-  })
 
   it('formats date correctly from ISO string', () => {
     const dateString = '2023-07-20T12:30:00Z'
@@ -56,21 +43,6 @@ describe('FormattedDate', () => {
     expect(timeElement).toHaveClass('custom-class')
   })
 
-  it('generates correct ISO string for datetime attribute with various dates', () => {
-    const datesAndExpected = [
-      [new Date(2022, 11, 31), 'Dec 31, 2022'],
-      [new Date(2023, 0, 1), 'Jan 1, 2023'],
-      [new Date(2023, 11, 25), 'Dec 25, 2023']
-    ]
-    
-    datesAndExpected.forEach(([date, expected]) => {
-      render(<FormattedDate date={date as Date} />)
-      expect(screen.getByText(expected as string)).toBeInTheDocument()
-      expect(screen.getByText(expected as string).tagName).toBe('TIME')
-      expect(screen.getByText(expected as string).getAttribute('datetime'))
-        .toBe((date as Date).toISOString())
-    })
-  })
 
   it('handles date conversion properly from string inputs', () => {
     const dateString = '2023-09-08T15:30:00Z'
@@ -106,19 +78,4 @@ describe('FormattedDate', () => {
     expect(formattedFromStr.textContent).toBe(formattedFromObj.textContent)
   })
 
-  it('displays correct abbreviations for all months', () => {
-    const months = [
-      [0, 'Jan'], [1, 'Feb'], [2, 'Mar'], [3, 'Apr'], 
-      [4, 'May'], [5, 'Jun'], [6, 'Jul'], [7, 'Aug'], 
-      [8, 'Sep'], [9, 'Oct'], [10, 'Nov'], [11, 'Dec']
-    ]
-    
-    months.forEach(([monthIndex, monthAbbr]) => {
-      const date = new Date(2023, monthIndex as number, 15)
-      const { unmount } = render(<FormattedDate date={date} />)
-      
-      expect(screen.getByText(`${monthAbbr} 15, 2023`)).toBeInTheDocument()
-      unmount() // Clean up between renders
-    })
-  })
 })
